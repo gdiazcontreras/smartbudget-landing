@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.send-img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+
+  @include mix.respond-to(mobile) {
+    max-width: 280px;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero-title {
+  font-weight: 700;
+  color: vars.$color-dark;
+
+  @include mix.respond-to(mobile) {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid vars.$color-muted;
+  background-color: vars.$color-light;
+
+  &:focus {
+    border-color: vars.$color-primary;
+    box-shadow: 0 0 0 0.2rem rgba(108, 61, 245, 0.25);
+  }
+
+  @include mix.respond-to(mobile) {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}

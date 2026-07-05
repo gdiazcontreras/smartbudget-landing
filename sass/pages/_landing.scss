@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+/* Fondo general de la landing */
+.landing-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: vars.$color-background-light; // reemplazo del hex
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Hero principal */
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: vars.$color-dark;
+  margin-bottom: 1rem;
+
+  span {
+    color: vars.$color-primary;
+  }
+
+  @include mix.respond-to(mobile) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.hero-text {
+  max-width: 420px;
+  font-size: 1rem;
+  color: vars.$color-muted;
+  margin-bottom: 1.5rem;
+
+  strong {
+    color: vars.$color-primary;
+  }
+
+  @include mix.respond-to(mobile) {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Hero card opcional */
+.hero-card {
+  @include mix.card-base;
+  @include mix.shadow(2);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+  }
+}

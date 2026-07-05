@@ -3,21 +3,22 @@
 
 .hero-card {
   background: linear-gradient(135deg, vars.$color-primary 0%, vars.$color-success 100%);
-  color: white;
+  color: vars.$color-light;
   border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
 
   .hero-title {
     font-size: 2.5rem;
     font-weight: bold;
-  }
-
-  .hero-btn {
-    margin-top: 1rem;
-    font-weight: 600;
+    margin-bottom: 1rem;
   }
 
   @include mix.respond-to(mobile) {
-    text-align: center;
-    .hero-title { font-size: 2rem; }
+    padding: 2rem 1rem;
+
+    .hero-title {
+      font-size: 2rem;
+    }
   }
 }

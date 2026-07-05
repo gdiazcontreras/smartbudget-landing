@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.custom-footer {
+  background: linear-gradient(135deg, lighten(vars.$color-primary, 5%), #7c4dff);
+  color: vars.$color-light;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 18px 18px 0 0;
+  margin-top: 3rem;
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+      @include mix.shadow(1); // sombra uniforme
+    }
+
+    span, strong {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: vars.$color-light;
+    }
+  }
+
+  .footer-text {
+    opacity: 0.9;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-copy {
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem 1rem;
+
+    .footer-text {
+      font-size: 0.85rem;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+    }
+  }
+}

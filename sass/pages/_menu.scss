@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+body {
+  background: linear-gradient(
+    135deg,
+    vars.$color-light 0%,
+    lighten(vars.$color-primary, 45%) 40%,
+    lighten(vars.$color-primary, 55%) 100%
+  );
+}
+
+/* =========================
+   TÍTULO
+========================= */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: vars.$color-dark;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, vars.$color-primary, #7c4dff);
+    margin: 12px auto 0;
+    border-radius: 10px;
+  }
+
+  @include mix.respond-to(mobile) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* =========================
+   MENU CARDS
+========================= */
+.menu-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @include mix.respond-to(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.menu-banner {
+  width: 100%;
+  border-radius: 20px;
+  @include mix.shadow(4);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+  display: block;
+
+  @include mix.respond-to(mobile) {
+    border-radius: 12px;
+  }
+}
+
+.menu-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+  border-radius: 16px;
+  background: rgba(108, 61, 245, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+
+  @include mix.respond-to(mobile) {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================
+   FAQ
+========================= */
+#faq {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: vars.$color-light;
+  border-radius: 18px;
+  @include mix.shadow(3);
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+}

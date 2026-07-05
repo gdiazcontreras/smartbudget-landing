@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+/* Botón principal */
+.btn-primary {
+  @include mix.btn-base(vars.$color-primary);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(108, 61, 245, 0.25);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: darken(vars.$color-primary, 8%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108, 61, 245, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.97);
+    background-color: darken(vars.$color-primary, 12%);
+    box-shadow: 0 4px 12px rgba(108, 61, 245, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 61, 245, 0.4);
+  }
+
+  @include mix.respond-to(mobile) {
+    display: block;
+    width: 100%;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+}
+
+/* Botón secundario */
+.btn-secondary {
+  @include mix.btn-base(vars.$color-secondary);
+  border-radius: 8px;
+}
+
+/* Botón de éxito */
+.btn-success {
+  @include mix.btn-base(vars.$color-success);
+  border-radius: 8px;
+}

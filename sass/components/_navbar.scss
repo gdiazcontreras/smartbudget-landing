@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.custom-navbar {
+  background: linear-gradient(135deg, #ffffff, #f7f3ff);
+  @include mix.shadow(3);
+  border-radius: 0 0 18px 18px;
+  padding: 0.8rem 1.5rem;
+
+  img {
+    border-radius: 8px;
+  }
+
+  .brand-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    strong {
+      color: vars.$color-primary; // "Smart" en morado
+    }
+
+    span {
+      color: vars.$color-dark; // "Budget" en negro
+    }
+
+    @include mix.respond-to(mobile) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .navbar-nav .nav-link {
+    transition: all 0.25s ease;
+    color: vars.$color-muted;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-decoration: none; // quita el subrayado
+
+    &:hover {
+      color: vars.$color-primary;
+      background-color: rgba(108, 61, 245, 0.08);
+    }
+
+    &.active {
+      color: vars.$color-primary !important;
+      font-weight: 600;
+      background-color: rgba(108, 61, 245, 0.12);
+    }
+
+    @include mix.respond-to(mobile) {
+      text-align: center;
+      padding: 8px;
+    }
+  }
+}

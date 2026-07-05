@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+/* =========================
+   TIPOGRAFÍA GLOBAL
+========================= */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: vars.$color-dark;
+  background-color: vars.$color-background-light;
+  margin: 0;
+}
+
+/* =========================
+   ENLACES
+========================= */
+a {
+  color: vars.$color-primary;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: darken(vars.$color-primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-primary {
+  @include mix.button-base;
+  background: vars.$color-primary;
+  color: vars.$color-light;
+
+  &:hover {
+    background: darken(vars.$color-primary, 8%);
+  }
+}
+
+.btn-secondary {
+  @include mix.button-base;
+  background: vars.$color-success;
+  color: vars.$color-light;
+
+  &:hover {
+    background: darken(vars.$color-success, 8%);
+  }
+}
+
+/* =========================
+   UTILIDADES
+========================= */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }

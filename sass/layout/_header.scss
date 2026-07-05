@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+/* Hero genérico */
+.hero-section {
+  background: linear-gradient(135deg, vars.$color-primary, #7c4dff);
+  color: vars.$color-light;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+
+  h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  @include mix.respond-to(mobile) {
+    padding: 2.5rem 1rem;
+
+    h1, h2, h3 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Banner específico del menú */
+.menu-hero {
+  text-align: center;
+
+  .menu-banner {
+    border-radius: 12px;
+    @include mix.shadow(2);
+  }
+}

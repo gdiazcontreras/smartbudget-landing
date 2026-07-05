@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+/* Cards de login */
+.login-card {
+  @include mix.card-base;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+
+  h2 {
+    color: vars.$color-dark;
+    font-weight: 700;
+  }
+
+  @include mix.respond-to(mobile) {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+/* Cards de depósito */
+.deposit-card {
+  @include mix.card-base;
+  padding: 2.5rem;
+  @include mix.shadow(4);
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+  }
+}
+
+/* Cards de beneficios */
+.benefit-card {
+  @include mix.card-base;
+  padding: 2rem;
+  transition: all 0.25s ease;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-6px);
+    @include mix.shadow(5);
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: vars.$color-primary;
+  }
+
+  h5 {
+    color: vars.$color-dark;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    color: vars.$color-muted;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* Cards de menú */
+.menu-card {
+  @include mix.card-base;
+  padding: 2rem;
+  transition: all 0.25s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-6px);
+    @include mix.shadow(5);
+  }
+
+  h5 {
+    color: vars.$color-dark;
+    font-weight: 700;
+  }
+
+  p {
+    color: vars.$color-muted;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* Cards de sendmoney */
+.send-card {
+  @include mix.card-base;
+  padding: 2.5rem;
+  @include mix.shadow(3);
+
+  @include mix.respond-to(mobile) {
+    padding: 1.5rem;
+  }
+}
+
+/* Cards de transactions */
+.transactions-card {
+  @include mix.card-base;
+  border-radius: 16px;
+  padding: 1.5rem;
+  @include mix.shadow(2);
+  margin-top: 1rem;
+
+  @include mix.respond-to(mobile) {
+    padding: 1rem;
+  }
+}
+
+.stat-card {
+  @include mix.card-base;
+  padding: 1rem;
+  border-radius: 12px;
+  @include mix.shadow(1);
+  text-align: center;
+
+  h6 {
+    color: vars.$color-muted;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  @include mix.respond-to(mobile) {
+    margin-bottom: 1rem;
+  }
+}

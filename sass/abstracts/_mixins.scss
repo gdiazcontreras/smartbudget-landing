@@ -10,3 +10,55 @@
     @media (min-width: 992px) { @content; }
   }
 }
+
+// Base para todas las cards
+@mixin card-base {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(108, 61, 245, 0.12);
+  border: 1px solid rgba(108, 61, 245, 0.08);
+}
+
+// Base para todos los botones
+@mixin btn-base($bg-color) {
+  background-color: $bg-color;
+  border: none;
+  color: white !important;
+  font-weight: 700;
+  padding: 0.9rem 2.5rem;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($bg-color, 8%);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+// Mixin para sombras
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 4px 12px rgba(108, 61, 245, 0.06);
+  } @else if $level == 2 {
+    box-shadow: 0 6px 18px rgba(108, 61, 245, 0.08);
+  } @else if $level == 3 {
+    box-shadow: 0 8px 25px rgba(108, 61, 245, 0.10);
+  } @else if $level == 4 {
+    box-shadow: 0 10px 30px rgba(108, 61, 245, 0.12);
+  } @else if $level == 5 {
+    box-shadow: 0 12px 30px rgba(108, 61, 245, 0.18);
+  }
+}
+
+@mixin button-base {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+

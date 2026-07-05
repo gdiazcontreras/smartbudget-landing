@@ -3,4 +3,30 @@
 body {
   font-family: vars.$font-main;
   line-height: 1.6;
+  font-size: 16px; // tamaño base cómodo
+  color: #333;     // texto principal neutro
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: vars.$color-dark; // gris oscuro, no negro duro
+}
+
+/* Párrafos */
+p {
+  margin-bottom: 1rem;
+  color: #444; // un gris suave, legible
+}
+
+/* Enlaces */
+a {
+  color: vars.$color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
