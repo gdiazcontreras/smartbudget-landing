@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.hero-card {
+  background: linear-gradient(135deg, vars.$color-primary 0%, vars.$color-success 100%);
+  color: white;
+  border-radius: 12px;
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .hero-btn {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  @include mix.respond-to(mobile) {
+    text-align: center;
+    .hero-title { font-size: 2rem; }
+  }
+}

@@ -1,0 +1,12 @@
+// Media queries responsivas
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 576px) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+}

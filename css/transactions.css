@@ -1,0 +1,56 @@
+.transactions-card {
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(108, 61, 245, 0.10);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-header {
+    background: linear-gradient(90deg, #6c3df5, #7c4dff);
+    color: white;
+}
+
+.table-header th {
+    border: none;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    border-color: #f1f1f1;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(108, 61, 245, 0.06);
+    transform: scale(1.01);
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(108, 61, 245, 0.08);
+    text-align: center;
+}
+
+.stat-card h6 {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+    font-weight: 800;
+}
+
+.hero-title {
+    font-weight: 700;
+    color: #1f2937;
+}

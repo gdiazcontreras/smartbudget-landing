@@ -1,0 +1,28 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #007bff 0%, #28a745 100%);
+  color: white;
+  border-radius: 12px;
+}
+.hero-card .hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-card .hero-btn {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+@media (max-width: 576px) {
+  .hero-card {
+    text-align: center;
+  }
+  .hero-card .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
