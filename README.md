@@ -1,12 +1,12 @@
-# Alke Wallet 💳
+# SmartBudget 💸
 
 Proyecto de billetera digital desarrollado como parte del bootcamp de frontend.  
-Permite simular login, depósitos, transferencias y visualizar un historial dinámico de transacciones.
+Permite simular login, depósitos, transferencias y visualizar un historial dinámico de transacciones con estilos modernos y arquitectura Sass.
 
 ---
 
 ## 🚀 Demo
-👉 [Ver proyecto en línea](https://gdiazcontreras.github.io/alke-wallet/)
+👉 [Ver proyecto en línea](https://gdiazcontreras.github.io/smartbudget-landing/)
 
 ## 🔑 Credenciales de prueba
 Para ingresar a la aplicación usar las siguientes credenciales:
@@ -27,9 +27,9 @@ Para ingresar a la aplicación usar las siguientes credenciales:
 
 ## 🛠️ Tecnologías utilizadas
 - HTML5  
-- CSS3 (con `global.css` para estilos comunes y archivos específicos por página)  
+- Sass (arquitectura 7-1, variables, mixins)  
+- CSS3 (compilado desde Sass)  
 - JavaScript (validaciones y lógica de transacciones)  
-- jQuery  
 - Git & GitHub Pages (deploy)
 
 ---
@@ -40,30 +40,36 @@ Para ingresar a la aplicación usar las siguientes credenciales:
 - Transferencias con validación de monto y saldo suficiente  
 - Historial de transacciones en tabla  
 - Estadísticas de ingresos, egresos y balance  
-- Estilos consistentes con `global.css` (navbar, footer, botones, alertas)
+- Estilos consistentes con Sass modular (navbar, footer, botones, alertas)
 
 ---
 
 ## 📂 Estructura del proyecto
-/css
-global.css
-login.css
-menu.css
-deposit.css
-sendmoney.css
-transactions.css
-index.css
-/js
-app.js
-/img
-(íconos y recursos gráficos)
-index.html
-login.html
-menu.html
-deposit.html
-sendmoney.html
-transactions.html
+/sass  
+(archivos SCSS organizados en 7-1: abstracts, base, components, layout, pages, themes, vendors)  
 
+/css  
+main.css (compilado desde Sass)  
+
+/js  
+app.js  
+
+/img  
+(íconos y recursos gráficos)  
+
+HTML pages:  
+- index.html  
+- login.html  
+- menu.html  
+- deposit.html  
+- sendmoney.html  
+- transactions.html  
+
+---
+
+## ⚙️ Scripts disponibles
+- `npm run build` → Compila Sass a CSS  
+- `npm run watch` → Compila Sass en tiempo real  
 
 ---
 
