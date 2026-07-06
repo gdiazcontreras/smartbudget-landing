@@ -1,3 +1,6 @@
+@use "sass:color"; // IMPORTANTE: habilita color.adjust()
+@use "../abstracts/variables" as vars;
+
 // Media queries responsivas
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
@@ -31,7 +34,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: darken($bg-color, 8%);
+    background-color: color.adjust($bg-color, $lightness: -8%); // correcto
     transform: translateY(-2px);
     text-decoration: none;
   }
@@ -61,4 +64,3 @@
   cursor: pointer;
   transition: all 0.25s ease;
 }
-

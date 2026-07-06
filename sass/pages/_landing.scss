@@ -1,11 +1,17 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
 
-/* Fondo general de la landing */
+/* Contenedor principal */
 .landing-container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  background-color: vars.$color-background-light; // reemplazo del hex
+  background-color: vars.$color-background-light;
+
+  section {
+    flex: 1; // las secciones ocupan espacio
+  }
 
   @include mix.respond-to(mobile) {
     padding: 1.5rem 1rem;

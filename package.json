@@ -1,0 +1,25 @@
+{
+  "name": "proyecto3",
+  "version": "1.0.0",
+  "description": "Proyecto de billetera digital desarrollado como parte del bootcamp de frontend.   Permite simular login, depósitos, transferencias y visualizar un historial dinámico de transacciones.",
+  "main": "index.js",
+"scripts": {
+  "build": "sass sass/main.scss css/main.css",
+  "watch": "sass --watch sass/main.scss css/main.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdiazcontreras/smartbudget-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gdiazcontreras/smartbudget-landing/issues"
+  },
+  "homepage": "https://github.com/gdiazcontreras/smartbudget-landing#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

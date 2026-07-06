@@ -1,66 +1,44 @@
-@use '../abstracts/variables' as vars;
-@use '../abstracts/mixins' as mix;
+@use "sass:color";
+@use "../abstracts/variables" as vars;
 
-/* =========================
-   TIPOGRAFÍA GLOBAL
-========================= */
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: vars.$color-dark;
-  background-color: vars.$color-background-light;
-  margin: 0;
+/* Tema por defecto */
+:root {
+  --color-primary: #{vars.$color-primary};
+  --color-secondary: #{vars.$color-secondary};
+  --color-success: #{vars.$color-success};
+  --color-light: #{vars.$color-light};
+  --color-dark: #{vars.$color-dark};
 }
 
-/* =========================
-   ENLACES
-========================= */
+/* Ejemplo de uso */
+body {
+  background-color: vars.$color-background-light;
+  color: vars.$color-dark;
+}
+
+/* Links */
 a {
   color: vars.$color-primary;
-  text-decoration: none;
-  transition: color 0.25s ease;
 
   &:hover {
-    color: darken(vars.$color-primary, 10%);
-    text-decoration: underline;
+    color: color.adjust(vars.$color-primary, $lightness: -10%); // antes darken()
   }
 }
 
-/* =========================
-   BOTONES
-========================= */
+/* Botón principal */
 .btn-primary {
-  @include mix.button-base;
   background: vars.$color-primary;
-  color: vars.$color-light;
 
   &:hover {
-    background: darken(vars.$color-primary, 8%);
+    background: color.adjust(vars.$color-primary, $lightness: -8%); // antes darken()
   }
 }
 
-.btn-secondary {
-  @include mix.button-base;
+/* Botón de éxito */
+.btn-success {
   background: vars.$color-success;
-  color: vars.$color-light;
 
   &:hover {
-    background: darken(vars.$color-success, 8%);
+    background: color.adjust(vars.$color-success, $lightness: -8%); // antes darken()
   }
 }
-
-/* =========================
-   UTILIDADES
-========================= */
-.text-center {
-  text-align: center;
-}
-
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 1.5rem; }
-
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 1rem; }
-.mb-4 { margin-bottom: 1.5rem; }
